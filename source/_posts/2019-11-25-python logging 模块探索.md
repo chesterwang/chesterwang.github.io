@@ -5,6 +5,12 @@ categories: python
 ---
 
 
+本文介绍了python logging 模块的大致原理。
+
+<!-- more -->
+
+
+
 目录
 
 - [1. logging 体系结构](#1-logging-%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
