@@ -1,6 +1,7 @@
 ---
 title: 读书-static-site-generators
 date: 2018-01-22 20:57:01
+tags: 读书
 categories: 工程开发系列
 ---
 

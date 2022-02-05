@@ -1,6 +1,7 @@
 ---
 title: 读书-understaning-ECMAScript-6
 date: 2018-01-21 14:15:41
+tags: 读书
 categories: 工程开发系列
 ---
 
