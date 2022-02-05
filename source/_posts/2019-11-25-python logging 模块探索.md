@@ -1,7 +1,7 @@
 ---
 title: python logging 模块探索 
 date: 2019-11-25 00:47:41
-categories: python
+categories: 工程开发系列
 ---
 
 
@@ -13,9 +13,9 @@ categories: python
 
 目录
 
-- [1. logging 体系结构](#1-logging-%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
-- [2. logging 中的数据结构](#2-logging-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
-- [3. 源码阅读收获](#3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E6%94%B6%E8%8E%B7)
+- [1. logging 体系结构](#1-logging-体系结构)
+- [2. logging 中的数据结构](#2-logging-中的数据结构)
+- [3. 源码阅读收获](#3-源码阅读收获)
 
 
 # 1. logging 体系结构
