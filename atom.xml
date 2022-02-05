@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-05T03:41:21.037Z</updated>
+  <updated>2022-02-05T03:54:56.107Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/"/>
     <id>http://example.com/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/</id>
     <published>2019-11-25T14:42:06.000Z</published>
-    <updated>2022-02-05T03:41:21.037Z</updated>
+    <updated>2022-02-05T03:54:56.107Z</updated>
     
     <content type="html"><![CDATA[<p>askdfjaldkfa<br>f<br>a</p><p>sd<br>fa</p><p>fd</p><p>excerpt: 本文对seldon的资料进行了收集。</p><span id="more"></span><p>目录</p><ul><li><a href="#1-%E8%B5%84%E6%96%99">1. 资料</a></li></ul><h1 id="1-资料"><a href="#1-资料" class="headerlink" title="1. 资料"></a>1. 资料</h1><ol><li><a href="https://docs.seldon.io/projects/seldon-core/en/latest/">Seldon Core — seldon-core documentation</a></li><li><a href="https://www.youtube.com/watch?v=pDlapGtecbY">(309) Serving ML Models at Scale with Seldon and Kubeflow - Clive Cox, Seldon.io - YouTube</a></li></ol><h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><h2 id="Serving-ML-Models-at-Scale-with-Seldon-and-Kubeflow-Clive-Cox-Seldon-io"><a href="#Serving-ML-Models-at-Scale-with-Seldon-and-Kubeflow-Clive-Cox-Seldon-io" class="headerlink" title="Serving ML Models at Scale with Seldon and Kubeflow - Clive Cox, Seldon.io"></a>Serving ML Models at Scale with Seldon and Kubeflow - Clive Cox, Seldon.io</h2><ul><li>agnostic</li><li>concept drift</li><li>helm</li><li>ksonnet</li><li>kubectl</li><li>routers ab-test multi-armed bandits</li><li>istio</li></ul>]]></content>
     
