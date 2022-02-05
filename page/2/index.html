@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-ajax" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/12/ajax/" class="article-date">
+  <time class="dt-published" datetime="2018-01-12T12:56:47.000Z" itemprop="datePublished">2018-01-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/01/12/ajax/">ajax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>wiki <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Ajax/_(programming)">https://en.wikipedia.org/wiki/Ajax\_(programming)</a></p>
+<p>  Ajax (also AJAX; &#x2F;ˈeɪdʒæks&#x2F;; short for “Asynchronous JavaScript And XML”)[1] is a set of Web development techniques using many Web technologies on the client side to create asynchronous Web applications. With Ajax, Web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behavior of the existing page. By decoupling the data interchange layer from the presentation layer, Ajax allows for Web pages, and by extension Web applications, to change content dynamically without the need to reload the entire page.[2] In practice, modern implementations commonly substitute JSON for XML due to the advantages of JSON being native to JavaScript.[3]</p>
+<p>  Asynchronous HTML and HTTP (AHAH) involves using XMLHTTPRequest to retrieve (X)HTML fragments, which are then inserted directly into the Web page.</p>
+</li>
+</ul>
+<h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li>ajax在低级设备上不被支持,这样代码必须在简单的form表单可以运行</li>
+<li>same-origin policy 不支持跨域调用,但是也可以通过iframe或者JSONP技术来绕开这个限制.</li>
+<li>The asynchronous callback-style of programming ,难以调试</li>
+<li>异步这个性质会导致client must poll the server, instead of listening, which incurs significant overhead. 低效, websockets可以作为一种替代方案</li>
+</ul>
+<h5 id="相关名词"><a href="#相关名词" class="headerlink" title="相关名词"></a>相关名词</h5><ul>
+<li><p>JSONP</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/JSONP#JSONP">https://en.wikipedia.org/wiki/JSONP#JSONP</a></li>
+</ul>
+<p>  JSONP (JSON with Padding or JSON-P[1]) is used to request data from a server residing in a different domain than the client. It was proposed by Bob Ippolito in 2005.[2] JSONP enables sharing of data bypassing same-origin policy. The policy disallows running JavaScript to read media DOM elements or XHR data fetched from outside the page’s origin. The aggregation of the site’s scheme, port number and host name identifies as its origin. Due to inherent insecurities, JSONP is being replaced by CORS.</p>
+</li>
+<li><p>callback</p>
+<p>  In computer programming, a callback is any executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at a given time. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback. In all cases, the intention is to specify a function or subroutine as an entity[clarification needed] that is, depending on the language, more or less similar to a variable (see first-class functions).</p>
+</li>
+<li><p>First-class function</p>
+</li>
+<li><p>poll</p>
+<ul>
+<li>轮询</li>
+</ul>
+<p>  Polling is the process where the computer or controlling device waits for an external device to check for its readiness or state, often with low-level hardware. For example, when a printer is connected via a parallel port, the computer waits until the printer has received the next character. These processes can be as minute as only reading one bit. Τhis is sometimes used synonymously with busy-wait polling. In this situation, when an I&#x2F;O operation is required, the computer does nothing other than check the status of the I&#x2F;O device until it is ready, at which point the device is accessed. In other words, the computer waits until the device is ready. Polling also refers to the situation where a device is repeatedly checked for readiness, and if it is not, the computer returns to a different task. Although not as wasteful of CPU cycles as busy waiting, this is generally not as efficient as the alternative to polling, interrupt-driven I&#x2F;O.</p>
+<p>  Polling, or polled operation, in computer science, refers to actively sampling the status of an external device by a client program as a synchronous activity. Polling is most often used in terms of input&#x2F;output (I&#x2F;O), and is also referred to as polled I&#x2F;O or software-driven I&#x2F;O.</p>
+</li>
+<li><p>Parallel port</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Parallel_port#Centronics">https://en.wikipedia.org/wiki/Parallel_port#Centronics</a></li>
+<li>主要由打印机技术发展而开发出的技术,host和打印机并行通信,后来hosts发展出了缓冲技术,提高了打印机的效率,降低了通信成本</li>
+</ul>
+<p>  A parallel port is a type of interface found on computers (personal and otherwise) for connecting peripherals. The name refers to the way the data is sent; parallel ports send multiple bits of data at once, in parallel communication, as opposed to serial interfaces that send bits one at a time. To do this, parallel ports require multiple data lines in their cables and port connectors, and tend to be larger than contemporary serial ports which only require one data line.</p>
+</li>
+<li><p>WebSocket</p>
+<p>  WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection. The WebSocket protocol was standardized by the IETF as RFC 6455 in 2011, and the WebSocket API in Web IDL is being standardized by the W3C.<br>  WebSocket is a different TCP protocol from HTTP. Both protocols are located at layer 7 in the OSI model and, as such, depend on TCP at layer 4. Although they are different, RFC 6455 states that WebSocket “is designed to work over HTTP ports 80 and 443 as well as to support HTTP proxies and intermediaries” thus making it compatible with the HTTP protocol. To achieve compatibility, the WebSocket handshake uses the HTTP Upgrade header[1] to change from the HTTP protocol to the WebSocket protocol.<br>  The WebSocket protocol enables interaction between a browser and a web server with lower overheads, facilitating real-time data transfer from and to the server. This is made possible by providing a standardized way for the server to send content to the browser without being solicited by the client, and allowing for messages to be passed back and forth while keeping the connection open. In this way, a two-way (bi-directional) ongoing conversation can take place between a browser and the server. The communications are done over TCP port number 80 (or 443 in the case of TLS-encrypted connections), which is of benefit for those environments which block non-web Internet connections using a firewall. Similar two-way browser-server communications have been achieved in non-standardized ways using stopgap technologies such as Comet.<br>  The WebSocket protocol is currently supported in most major browsers including Google Chrome, Microsoft Edge, Internet Explorer, Firefox, Safari and Opera. WebSocket also requires web applications on the server to support it.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/12/ajax/" data-id="ckz9abt8x0009zdya0yzb1331" data-title="ajax" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-全栈之路" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/10/%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/" class="article-date">
+  <time class="dt-published" datetime="2018-01-10T13:07:22.000Z" itemprop="datePublished">2018-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/01/10/%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/">全栈之路</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Front-End Developer Handbook 2017 <a target="_blank" rel="noopener" href="https://frontendmasters.com/books/front-end-handbook/2017/">https://frontendmasters.com/books/front-end-handbook/2017/</a></li>
+</ul>
+<p> 一个全栈增长工程师的练手项目集<br><a target="_blank" rel="noopener" href="http://www.epubit.com.cn/book/details/4868">http://www.epubit.com.cn/book/details/4868</a></p>
+<p>有了这个列表，程序员不愁没练手的小项目了<br><a target="_blank" rel="noopener" href="http://blog.jobbole.com/49762/">http://blog.jobbole.com/49762/</a><br><a target="_blank" rel="noopener" href="http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/">http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/</a></p>
+<p>有哪些适合新手练手的前端项目？<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22766255">https://zhuanlan.zhihu.com/p/22766255</a></p>
+<p>大量的实例<br><a target="_blank" rel="noopener" href="http://www.fgm.cc/learn/">http://www.fgm.cc/learn/</a></p>
+<p>大量前端demo<br><a target="_blank" rel="noopener" href="https://github.com/YUUXIAO/webProject">https://github.com/YUUXIAO/webProject</a></p>
+<p>若干demo<br><a target="_blank" rel="noopener" href="https://github.com/hwaphon/WebProject">https://github.com/hwaphon/WebProject</a></p>
+<p>天猫官网demo<br><a target="_blank" rel="noopener" href="http://how2j.cn/k/tmall-front/tmall-front-790/790.html?tid=31">http://how2j.cn/k/tmall-front/tmall-front-790/790.html?tid=31</a></p>
+<p>微信demo<br><a target="_blank" rel="noopener" href="https://github.com/useryangtao/vue-wechat">https://github.com/useryangtao/vue-wechat</a></p>
+<p>天猫整站的开发<br><a target="_blank" rel="noopener" href="http://how2j.cn/stage/39.html">http://how2j.cn/stage/39.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/10/%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/" data-id="ckz9abt8z000czdya7m8e5dh0" data-title="全栈之路" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-读书-Front-End-Developer-Handbook-2017" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/10/%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/" class="article-date">
+  <time class="dt-published" datetime="2018-01-09T17:18:06.000Z" itemprop="datePublished">2018-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/01/10/%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/">读书 Front-End Developer Handbook 2017</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="part1-introduction"><a href="#part1-introduction" class="headerlink" title="part1 introduction"></a>part1 introduction</h1><ul>
+<li>前端runtime<ul>
+<li>web browser</li>
+<li>headless browser<ul>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/u014745198/article/details/60757926">http://blog.csdn.net/u014745198/article/details/60757926</a></li>
+<li>A headless browser is a web browser without a graphical user interface.</li>
+<li>那么浏览器该有的东西它都应该有，只是看不到界面而已。</li>
+<li>list of headless browsers: chrome&#x2F;firefox&#x2F;PhantomJS&#x2F;HtmlUnit&#x2F;TrifleJS&#x2F;Splash&#x2F;slimerjs</li>
+<li>Headless browsers are a web browser without a graphical user interface that can be controlled from a command line interface programmatically for the purpose of web page automation (e.g., functional testing, scraping, unit testing, etc.).</li>
+</ul>
+</li>
+<li>WebView<ul>
+<li>Webviews are used by a native OS, in a native application, to run web pages.</li>
+<li>list<ul>
+<li>Cordova (typically for native phone&#x2F;tablet apps)</li>
+<li>NW.js (typically used for desktop apps)</li>
+<li>Electron (typically used for desktop apps)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>compilation ouput<ul>
+<li>用户浏览器上的开发语言来写原生应用</li>
+<li>list<ul>
+<li>NativeScript</li>
+<li>React Native</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>web technologies employed by front-end developers<ul>
+<li>核心技术<ul>
+<li>Uniform Resource Locators (aka URLs)</li>
+<li>Hypertext Transfer Protocol (aka HTTP)</li>
+<li>Hyper Text Markup Language (aka HTML)</li>
+<li>Cascading Style Sheets (aka CSS)</li>
+<li>JavaScript Programming Language (aka ECMAScript 262)</li>
+<li>JavaScript Object Notation (aka JSON)</li>
+<li>Document Object Model (aka DOM)</li>
+<li>Web APIs (aka HTML5 and friends or Browser APIs)</li>
+<li>Web Content Accessibility Guidelines (aka WCAG) &amp; Accessible Rich Internet Applications (aka ARIA)</li>
+</ul>
+</li>
+<li>另一个完全技能列表 <a target="_blank" rel="noopener" href="https://platform.html5.org/">https://platform.html5.org/</a></li>
+<li>HTML<ul>
+<li>Most relevant specifications &#x2F; documentation:<ul>
+<li><a target="_blank" rel="noopener" href="http://www.w3.org/standards/techs/html#w3c_all">All W3C HTML Spec</a></li>
+<li><a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage">The elements of HTML from the Living Standard</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Global attributes</a></li>
+<li><a target="_blank" rel="noopener" href="http://w3c.github.io/html/">HTML 5.2 from W3C</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">HTML attribute reference</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML element reference</a></li>
+<li><a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/syntax.html#syntax">The HTML Syntax</a> from the Living Standard</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CSS<ul>
+<li>Most relevant specifications &#x2F; documentation:<ul>
+<li><a target="_blank" rel="noopener" href="http://www.w3.org/Style/CSS/current-work#roadmap">All W3C CSS Specifications</a></li>
+<li><a target="_blank" rel="noopener" href="https://drafts.csswg.org/css2/">Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS reference</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.w3.org/TR/css3-selectors/">Selectors Level 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DOM<ul>
+<li>Most relevant specifications &#x2F; documentation:<ul>
+<li><a target="_blank" rel="noopener" href="https://www.w3.org/TR/DOM-Level-3-Events/">Document Object Model (DOM) Level 3 Events Specification</a></li>
+<li><a target="_blank" rel="noopener" href="https://dom.spec.whatwg.org/">DOM Living Standard</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.w3.org/TR/2015/REC-dom-20151119/">W3C DOM4</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>JavaScript<ul>
+<li>Most relevant specifications &#x2F; documentation:<ul>
+<li><a target="_blank" rel="noopener" href="https://tc39.github.io/ecma262/">ECMAScript® 2017 Language Specification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Web APIs (aka HTML5 and friends)<ul>
+<li>Most relevant documentation:<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API">Web API Interfaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hypertext Transfer Protocol (aka HTTP)<ul>
+<li>Most relevant specifications:<ul>
+<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc2616">Hypertext Transfer Protocol – HTTP&#x2F;1.1</a></li>
+<li><a target="_blank" rel="noopener" href="https://http2.github.io/">HTTP&#x2F;2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Uniform Resource Locators (aka URL)<ul>
+<li>A URL is a specific type of uniform resource identifier (URI).</li>
+<li>Most relevant specifications:<ul>
+<li><a target="_blank" rel="noopener" href="http://www.w3.org/Addressing/URL/url-spec.txt">Uniform Resource Locators (URL)</a></li>
+<li><a target="_blank" rel="noopener" href="https://url.spec.whatwg.org/">URL Living Standard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>JavaScript Object Notation (aka JSON)<ul>
+<li>Most relevant specifications:<ul>
+<li><a target="_blank" rel="noopener" href="http://json.org/">Introducing JSON</a></li>
+<li><a target="_blank" rel="noopener" href="http://jsonapi.org/">JSON API</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf">The JSON Data Interchange Format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Front-End Dev Skills<ul>
+<li>Content Management Systems (aka CMS)</li>
+<li>Node.js</li>
+<li>Cross-Browser Testing</li>
+<li>Cross-Platform Testing</li>
+<li>Unit Testing</li>
+<li>Cross-Device Testing</li>
+<li>Accessibility &#x2F; WAI-ARIA</li>
+<li>Search Engine Optimization (aka SEO)</li>
+<li>Interaction or User Interface Design</li>
+<li>User Experience</li>
+<li>Usability</li>
+<li>E-commerce Systems</li>
+<li>Portal Systems</li>
+<li>Wireframing</li>
+<li>CSS Layout &#x2F; Grids</li>
+<li>DOM Manipulation (e.g., jQuery)</li>
+<li>Mobile Web Performance</li>
+<li>Load Testing</li>
+<li>Performance Testing</li>
+<li>Progressive Enhancement &#x2F; Graceful Degradation</li>
+<li>Version Control (e.g., GIT)</li>
+<li>MVC &#x2F; MVVM &#x2F; MV*</li>
+<li>Functional Programming</li>
+<li>Data Formats (e.g., JSON, XML)</li>
+<li>Data APIs (e.g Restful API)</li>
+<li>Web Font Embedding</li>
+<li>Scalable Vector Graphics (aka SVG)</li>
+<li>Regular Expressions</li>
+<li>Content Strategy</li>
+<li>Microdata &#x2F; Microformats</li>
+<li>Task Runners, Build Tools, Process Automation Tools</li>
+<li>Responsive Web Design</li>
+<li>Object-Oriented Programming</li>
+<li>Application Architecture</li>
+<li>Modules</li>
+<li>Dependency Managers</li>
+<li>Package Managers</li>
+<li>JavaScript Animation</li>
+<li>CSS Animation</li>
+<li>Charts &#x2F; Graphs</li>
+<li>UI Widgets</li>
+<li>Code Quality Testing</li>
+<li>Code Coverage Testing</li>
+<li>Code Complexity Analysis</li>
+<li>Integration Testing</li>
+<li>Command Line &#x2F; CLI</li>
+<li>Templating Strategies</li>
+<li>Templating Engines</li>
+<li>Single Page Applications</li>
+<li>XHR Requests (aka AJAX)</li>
+<li>Web&#x2F;Browser Security</li>
+<li>HTML Semantics</li>
+<li>Browser Developer Tools</li>
+</ul>
+</li>
+<li>interviews<ul>
+<li>Questions you may get asked:<ul>
+<li><a target="_blank" rel="noopener" href="https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95">10 Interview Questions Every JavaScript Developer Should Know</a></li>
+<li><a target="_blank" rel="noopener" href="http://h5bp.github.io/Front-end-Developer-Interview-Questions/">Front-End Job Interview Questions</a></li>
+<li><a target="_blank" rel="noopener" href="http://davidshariff.com/quiz/">Front End Web Development Quiz</a></li>
+<li><a target="_blank" rel="noopener" href="http://thatjsdude.com/interview/index.html">Interview Questions for Front-End-Developer</a></li>
+<li><a target="_blank" rel="noopener" href="http://davidshariff.com/js-quiz/">JavaScript Web Quiz</a></li>
+</ul>
+</li>
+<li>Questions you ask:<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ChiperSoft/InterviewThis">An open source list of developer questions to ask prospective employers</a></li>
+</ul>
+</li>
+<li>Preparing:<ul>
+<li><a target="_blank" rel="noopener" href="http://davidshariff.com/blog/preparing-for-a-front-end-web-development-interview-in-2017/">Preparing for a Front-End Web Development Interview in 2017</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.interviewcake.com/">Interview Cake</a> [$]</li>
+<li><a target="_blank" rel="noopener" href="https://medium.freecodecamp.com/cracking-the-front-end-interview-9a34cd46237">Cracking the front-end interview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="part2-learning"><a href="#part2-learning" class="headerlink" title="part2 learning"></a>part2 learning</h1><ul>
+<li><p>video materials</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://codecademy.com/">codecademy.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.codeschool.com/">codeschool.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://egghead.io/">egghead.io</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.eventedmind.com/">eventedmind.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://frontendmasters.com/">Frontend Masters</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.freecodecamp.com/">Freecodecamp</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.khanacademy.org/computing/computer-programming">Khan Academy</a></li>
+<li><a target="_blank" rel="noopener" href="https://laracasts.com/">laracasts.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.lynda.com/">lynda.com</a> [careful, quality varies]</li>
+<li><a target="_blank" rel="noopener" href="https://mijingo.com/">mijingo.com</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.pluralsight.com/">pluralsight.com</a> [careful, quality varies]</li>
+<li><a target="_blank" rel="noopener" href="https://teamtreehouse.com/">Treehouse</a></li>
+<li><a target="_blank" rel="noopener" href="https://tutsplus.com/courses">tutsplus.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.udacity.com/courses/web-development">Udacity</a> [careful, quality varies]</li>
+</ul>
+</li>
+<li><p>How Does the Internet Work?</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm">http://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm</a></li>
+<li>layers: application&#x2F;TCP&#x2F;IP&#x2F;Harware</li>
+<li>If the message to be sent is long, each stack layer that the message passes through may break the message up into smaller chunks of data.</li>
+<li>In TCP layer, Each packet is assigned a port number.</li>
+<li>IP layer, 添加IP地址</li>
+</ul>
+</li>
+<li><p>learn web browsers</p>
+<ul>
+<li>The <a target="_blank" rel="noopener" href="https://www.sitepoint.com/browser-trends-september-2016-browser-wars/">most commonly used browsers</a> (on any device) are:<ol>
+<li><a target="_blank" rel="noopener" href="http://www.google.com/chrome/">Chrome</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Blink_%28layout_engine%29">Blink</a> + <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/V8_%28JavaScript_engine%29">V8</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Gecko_%28software%29">Gecko</a> + <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/SpiderMonkey_%28software%29">SpiderMonkey</a>)</li>
+<li><a target="_blank" rel="noopener" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Trident_%28layout_engine%29">Trident</a> + <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29">Chakra</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://www.apple.com/safari/">Safari</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/WebKit">Webkit</a> + <a target="_blank" rel="noopener" href="https://trac.webkit.org/wiki/SquirrelFish">SquirrelFish</a>)</li>
+</ol>
+</li>
+<li>The Most Commonly Used Headless Browser Are:<ul>
+<li><a target="_blank" rel="noopener" href="http://phantomjs.org/">PhantomJS</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/WebKit">Webkit</a> + SquirrelFish)</li>
+<li><a target="_blank" rel="noopener" href="http://slimerjs.org/">SlimerJS</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Gecko_%28software%29">Gecko</a> + <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/SpiderMonkey_%28software%29">SpiderMonkey</a>)</li>
+<li><a target="_blank" rel="noopener" href="http://triflejs.org/">TrifleJS</a> (engine: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Trident_%28layout_engine%29">Trident</a> + <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29">Chakra</a>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DNS</p>
+<ul>
+<li>wiki:The Domain Name System (DNS) is a hierarchical distributed naming system for computers, services, or any resource connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates domain names, which can be easily memorized by humans, to the numerical IP addresses needed for the purpose of computer services and devices worldwide. The Domain Name System is an essential component of the functionality of most Internet services because it is the Internet’s primary directory service.</li>
+</ul>
+</li>
+<li><p>Learn HTTP&#x2F;Networks  </p>
+<ul>
+<li>HTTP Specifications<ul>
+<li><a target="_blank" rel="noopener" href="https://http2.github.io/">HTTP&#x2F;2</a></li>
+<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc2616">Hypertext Transfer Protocol – HTTP&#x2F;1.1</a></li>
+</ul>
+</li>
+<li>HTPP STATUS code<ul>
+<li><a target="_blank" rel="noopener" href="https://httpstatuses.com/">https://httpstatuses.com/</a></li>
+</ul>
+</li>
+<li>http book:  High Performance Browser Networking<ul>
+<li>content: networks&#x2F;transport protocols&#x2F;application protocols&#x2F;apis(XHR websocket webrtc)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Learn Web Hosting</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.whoishostingthis.com/resources/web-hosting/">https://www.whoishostingthis.com/resources/web-hosting/</a></li>
+</ul>
+</li>
+<li><p>Learn General Front-End Development    </p>
+</li>
+<li><p>Learn User Interface&#x2F;Interaction Design</p>
+</li>
+<li><p>Learn HTML &amp; CSS</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://learn.shayhowe.com/advanced-html-css/complex-selectors/">https://learn.shayhowe.com/advanced-html-css/complex-selectors/</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.shayhowe.com/html-css/building-your-first-web-page/">https://learn.shayhowe.com/html-css/building-your-first-web-page/</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript</a></li>
+</ul>
+</li>
+<li><p>Learn DOM, BOM, &amp; jQuery</p>
+<ul>
+<li>document object model <a target="_blank" rel="noopener" href="http://eloquentjavascript.net/13_dom.html">http://eloquentjavascript.net/13_dom.html</a><ul>
+<li>document.documentElement as root</li>
+<li>each DOM node object has a <code>nodeType </code>  property,指明节点类型,其实是枚举类, <code>document.**_NODE </code> 是这些枚举类</li>
+<li>all element node have a <code>getElementBytTagName getElementBytTagId getElementByClassId </code>method.</li>
+<li>element returned by <code>querySelectorAll </code> method is not live. It won’t change when you change the document.</li>
+<li><a target="_blank" rel="noopener" href="https://www.codecademy.com/courses/web-beginner-en-bay3D/0/1?curriculum_id=50a3fad8c7a770b5fd0007a1">https://www.codecademy.com/courses/web-beginner-en-bay3D/0/1?curriculum_id=50a3fad8c7a770b5fd0007a1</a></li>
+<li>book DOM Enlightenment: <a target="_blank" rel="noopener" href="http://domenlightenment.com/">http://domenlightenment.com/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Learn Web&#x2F;Browser APIs        </p>
+<ul>
+<li>HTML5: <a target="_blank" rel="noopener" href="http://apress.jensimmons.com/v5/pro-html5-programming/ch0.html">http://apress.jensimmons.com/v5/pro-html5-programming/ch0.html</a></li>
+<li>api 文档: <a target="_blank" rel="noopener" href="http://html5index.org/">http://html5index.org/</a></li>
+</ul>
+</li>
+<li><p>Learn Computer Science via JS    </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/nzakas/computer-science-in-javascript">https://github.com/nzakas/computer-science-in-javascript</a></li>
+</ul>
+</li>
+<li><p>Learn Front-End Application Architecture    </p>
+</li>
+<li><p>Learn Build and task automation</p>
+<ul>
+<li>Build automation is the process of automating the creation of a software build and the associated processes including: compiling computer source code into binary code, packaging binary code, and running automated tests.</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/10/%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/" data-id="ckz9abt91000ezdyaa5qc85r3" data-title="读书 Front-End Developer Handbook 2017" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-HFHT算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/09/HFHT%E7%AE%97%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2018-01-09T14:35:25.000Z" itemprop="datePublished">2018-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/01/09/HFHT%E7%AE%97%E6%B3%95/">HFHT算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="论文关键点"><a href="#论文关键点" class="headerlink" title="论文关键点"></a>论文关键点</h1><h3 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h3><ul>
+<li>combine latent rating dimensions with latent review topics.</li>
+<li>In spite of the wealth of research on modeling ratings, the other form of feedback present on review websites—namely, the reviews themselves—is typically ignored. In our opinion, ignoring this rich source of information is a major shortcoming of existing work on recommender systems</li>
+</ul>
+<h1 id="论文的问题"><a href="#论文的问题" class="headerlink" title="论文的问题"></a>论文的问题</h1><ul>
+<li>item的rating和review,两个比起来,对于新用户来说,更愿意rating,因为review是比rating操作更为复杂的步骤</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/09/HFHT%E7%AE%97%E6%B3%95/" data-id="ckz9abt8u0005zdya0vffhbpv" data-title="HFHT算法" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-读书笔记-全栈应用开发：精益实践" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/09/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/" class="article-date">
+  <time class="dt-published" datetime="2018-01-08T17:51:24.000Z" itemprop="datePublished">2018-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/01/09/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/">读书笔记&lt;&lt;全栈应用开发：精益实践&gt;&gt;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>资料文档</p>
+<ul>
+<li>Growth: 全栈增长工程师指南 <a target="_blank" rel="noopener" href="http://growth.phodal.com/">http://growth.phodal.com/</a></li>
+<li>老曹眼中的全栈架构师 <a target="_blank" rel="noopener" href="https://yq.aliyun.com/articles/66879?utm_campaign=wenzhang&amp;utm_medium=article&amp;utm_source=QQ-qun&amp;2017315&amp;utm_content=m_13631">https://yq.aliyun.com/articles/66879?utm_campaign=wenzhang&amp;utm_medium=article&amp;utm_source=QQ-qun&amp;2017315&amp;utm_content=m_13631</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/suoyuesmile/full-stack-developer">https://github.com/suoyuesmile/full-stack-developer</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/calidion/webfullstack-awesome">https://github.com/calidion/webfullstack-awesome</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Honlan/fullstack-data-engineer">https://github.com/Honlan/fullstack-data-engineer</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wangqianfront/full-stack-developer">https://github.com/wangqianfront/full-stack-developer</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/kevindeasis/awesome-fullstack">https://github.com/kevindeasis/awesome-fullstack</a></li>
+<li><a target="_blank" rel="noopener" href="https://frontendmasters.gitbooks.io/front-end-handbook/content/tools/code-editor.html">https://frontendmasters.gitbooks.io/front-end-handbook/content/tools/code-editor.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://frontendmasters.com/books/front-end-handbook/2017/">https://frontendmasters.com/books/front-end-handbook/2017/</a></li>
+</ul>
+</li>
+<li><p>在前后端解耦合的系统中,系统架构模式</p>
+<ul>
+<li>MVC</li>
+<li>MVP</li>
+<li>MVVM</li>
+</ul>
+</li>
+<li><p>baas</p>
+</li>
+</ul>
+<p>-websocket</p>
+<ul>
+<li>javascript编译<ul>
+<li>coffeescript</li>
+<li>webpack</li>
+<li>babel</li>
+</ul>
+</li>
+</ul>
+<p>精益创业<br>精益数据分析<br>精益客户开发</p>
+<p>敏捷数据科学</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/09/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/" data-id="ckz9abt95000kzdyaen9h9hbv" data-title="读书笔记&lt;&lt;全栈应用开发：精益实践&gt;&gt;" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/01/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2018-01-01T14:35:25.000Z" itemprop="datePublished">2018-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2018/01/01/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/01/hello-world/" data-id="ckz9abt8v0006zdya14ex2hoq" data-title="Hello World" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/">seldon 调研</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/">python logging 模块探索</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/">DL4j系列-项目概览</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E8%AF%BB%E4%B9%A6-pro-html5-programming/">读书-pro-html5-programming</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E4%BA%86%E8%A7%A3webhook/">了解webhook</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

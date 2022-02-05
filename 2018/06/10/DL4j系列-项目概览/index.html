@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DL4j系列-项目概览 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="目录  1. 基于java 2. 开源 3. 分布式 4. python连接 5. 性能  本文解读 DL4j的特点  官网  https:&#x2F;&#x2F;deeplearning4j.org&#x2F;cn&#x2F;index.html https:&#x2F;&#x2F;deeplearning4j.org&#x2F;index.html   DL4j的overview资料  https:&#x2F;&#x2F;deeplearning4j.org&#x2F;overview ht">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DL4j系列-项目概览">
+<meta property="og:url" content="http://example.com/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目录  1. 基于java 2. 开源 3. 分布式 4. python连接 5. 性能  本文解读 DL4j的特点  官网  https:&#x2F;&#x2F;deeplearning4j.org&#x2F;cn&#x2F;index.html https:&#x2F;&#x2F;deeplearning4j.org&#x2F;index.html   DL4j的overview资料  https:&#x2F;&#x2F;deeplearning4j.org&#x2F;overview ht">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-06-10T04:36:42.000Z">
+<meta property="article:modified_time" content="2022-02-05T03:19:51.227Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DL4j系列-项目概览" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/" class="article-date">
+  <time class="dt-published" datetime="2018-06-10T04:36:42.000Z" itemprop="datePublished">2018-06-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DL4j系列-项目概览
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>目录</p>
+<ul>
+<li><a href="#1-%E5%9F%BA%E4%BA%8Ejava">1. 基于java</a></li>
+<li><a href="#2-%E5%BC%80%E6%BA%90">2. 开源</a></li>
+<li><a href="#3-%E5%88%86%E5%B8%83%E5%BC%8F">3. 分布式</a></li>
+<li><a href="#4-python%E8%BF%9E%E6%8E%A5">4. python连接</a></li>
+<li><a href="#5-%E6%80%A7%E8%83%BD">5. 性能</a></li>
+</ul>
+<p>本文解读 DL4j的特点</p>
+<ul>
+<li><p>官网</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://deeplearning4j.org/cn/index.html">https://deeplearning4j.org/cn/index.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://deeplearning4j.org/index.html">https://deeplearning4j.org/index.html</a></li>
+</ul>
+</li>
+<li><p>DL4j的overview资料</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://deeplearning4j.org/overview">https://deeplearning4j.org/overview</a></li>
+<li><a target="_blank" rel="noopener" href="https://deeplearning4j.org/cn/overview">https://deeplearning4j.org/cn/overview</a></li>
+</ul>
+</li>
+</ul>
+<p>DeepLearning4J（DL4J）是一套基于Java语言的神经网络工具包，可以构建、训练和部署神经网络。</p>
+<ul>
+<li>特点: <ul>
+<li>基于java</li>
+<li>开源</li>
+<li>分布式, 可以和hadoop&#x2F;spark集成</li>
+<li>可以和tensorflow&#x2F;keras连接</li>
+<li>底层c++支持</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-基于java"><a href="#1-基于java" class="headerlink" title="1. 基于java"></a>1. 基于java</h1><p>大数据基础设施都是java系语言构建和工程化,对于很多已经投入大量的资金&#x2F;人力投入的公司,想当然的模型的线上部署和服务应该以java为准.</p>
+<h1 id="2-开源"><a href="#2-开源" class="headerlink" title="2. 开源"></a>2. 开源</h1><p>可以根据自己的业务&#x2F;性能需求来修改和扩展代码,</p>
+<h1 id="3-分布式"><a href="#3-分布式" class="headerlink" title="3. 分布式"></a>3. 分布式</h1><p>将DL4j和spark进行集成,进行分布式训练,并可以连接生成训练数据的阶段,形成工作流: <strong>Spark的准备数据 -&gt; 处理清洗数据 -&gt; 训练模型</strong></p>
+<h1 id="4-python连接"><a href="#4-python连接" class="headerlink" title="4. python连接"></a>4. python连接</h1><p>可以形成工作流:  ** Hadoop&#x2F;Spark积累训练数据 -&gt; python训练 -&gt; DL4j导入模型并部署**</p>
+<h1 id="5-性能"><a href="#5-性能" class="headerlink" title="5. 性能"></a>5. 性能</h1><p>底层的向量矩阵计算由javacpp项目支持,即由JNI的方式调用c++代码,性能更高效</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/" data-id="ckz9abt8s0004zdyaf901365z" data-title="DL4j系列-项目概览" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python logging 模块探索
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/02/%E8%AF%BB%E4%B9%A6-pro-html5-programming/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">读书-pro-html5-programming</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/">seldon 调研</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/">python logging 模块探索</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/">DL4j系列-项目概览</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E8%AF%BB%E4%B9%A6-pro-html5-programming/">读书-pro-html5-programming</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E4%BA%86%E8%A7%A3webhook/">了解webhook</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

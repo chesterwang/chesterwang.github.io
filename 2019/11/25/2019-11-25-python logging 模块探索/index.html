@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>python logging 模块探索 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="本文介绍了python logging 模块的大致原理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python logging 模块探索">
+<meta property="og:url" content="http://example.com/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本文介绍了python logging 模块的大致原理。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-11-24T16:47:41.000Z">
+<meta property="article:modified_time" content="2022-02-05T03:42:16.757Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2019-11-25-python logging 模块探索" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/" class="article-date">
+  <time class="dt-published" datetime="2019-11-24T16:47:41.000Z" itemprop="datePublished">2019-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      python logging 模块探索
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>本文介绍了python logging 模块的大致原理。</p>
+<span id="more"></span>
+
+
+
+<p>目录</p>
+<ul>
+<li><a href="#1-logging-%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84">1. logging 体系结构</a></li>
+<li><a href="#2-logging-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">2. logging 中的数据结构</a></li>
+<li><a href="#3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E6%94%B6%E8%8E%B7">3. 源码阅读收获</a></li>
+</ul>
+<h1 id="1-logging-体系结构"><a href="#1-logging-体系结构" class="headerlink" title="1. logging 体系结构"></a>1. logging 体系结构</h1><ol>
+<li>Manager 管理Logger的树性体系</li>
+<li>Logger 一个Logger实例可以包含多个Handler,底层调用self.callHandlers()方法来处理LogRecord</li>
+<li>Handler 一个Handler可以包含多个,Logger.callHandlers()调用的是该类的handle方法</li>
+<li>root为Logger树性体系的根logger,任何logger实例都挂靠在该logger(无论间接还是直接)</li>
+</ol>
+<h1 id="2-logging-中的数据结构"><a href="#2-logging-中的数据结构" class="headerlink" title="2. logging 中的数据结构"></a>2. logging 中的数据结构</h1><p><code>logging</code> 模块内部的数据结构如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单条日志消息</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LogRecord</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    A LogRecord instance represents an event being logged.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getMessage</span>(<span class="params">self</span>):</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#日志格式风格</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PercentStyle</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">format</span>(<span class="params">self, record</span>):</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StrFormatStyle</span>(<span class="title class_ inherited__">PercentStyle</span>):</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StringTemplateStyle</span>(<span class="title class_ inherited__">PercentStyle</span>):</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#格式化器</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Formatter</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Formatter instances are used to convert a LogRecord to text.</span></span><br><span class="line"><span class="string">    def __init__(self, fmt=None, datefmt=None, style=&#x27;%&#x27;):</span></span><br><span class="line"><span class="string">    def formatMessage(self, record):</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#过滤器</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Filter</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Filter instances are used to perform arbitrary filtering of LogRecords.</span></span><br><span class="line"><span class="string">    def filter(self, record):</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#过滤器集合</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Filterer</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    A base class for loggers and handlers which allows them to share</span></span><br><span class="line"><span class="string">    common code.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Handler</span>(<span class="title class_ inherited__">Filterer</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Handler instances dispatch logging events to specific destinations.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    def handle(self, record):</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        Conditionally emit the specified logging record.</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StreamHandler</span>(<span class="title class_ inherited__">Handler</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    A handler class which writes logging records, appropriately formatted,</span></span><br><span class="line"><span class="string">    to a stream. Note that this class does not close the stream, as</span></span><br><span class="line"><span class="string">    sys.stdout or sys.stderr may be used.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">FileHandler</span>(<span class="title class_ inherited__">StreamHandler</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    A handler class which writes formatted logging records to disk files.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Manager</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    There is [under normal circumstances] just one Manager instance, which</span></span><br><span class="line"><span class="string">    holds the hierarchy of loggers.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getLogger</span>(<span class="params">self, name</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Get a logger with the specified name (channel name), creating it</span></span><br><span class="line"><span class="string">    if it doesn&#x27;t yet exist. This name is a dot-separated hierarchical</span></span><br><span class="line"><span class="string">    name, such as &quot;a&quot;, &quot;a.b&quot;, &quot;a.b.c&quot; or similar.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span>(<span class="title class_ inherited__">Filterer</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Instances of the Logger class represent a single logging channel. A</span></span><br><span class="line"><span class="string">    &quot;logging channel&quot; indicates an area of an application. Exactly how an</span></span><br><span class="line"><span class="string">    &quot;area&quot; is defined is up to the application developer. Since an</span></span><br><span class="line"><span class="string">    application can have any number of areas, logging channels are identified</span></span><br><span class="line"><span class="string">    by a unique string. Application areas can be nested (e.g. an area</span></span><br><span class="line"><span class="string">    of &quot;input processing&quot; might include sub-areas &quot;read CSV files&quot;, &quot;read</span></span><br><span class="line"><span class="string">    XLS files&quot; and &quot;read Gnumeric files&quot;). To cater for this natural nesting,</span></span><br><span class="line"><span class="string">    channel names are organized into a namespace hierarchy where levels are</span></span><br><span class="line"><span class="string">    separated by periods, much like the Java or Python package namespace. So</span></span><br><span class="line"><span class="string">    in the instance given above, channel names might be &quot;input&quot; for the upper</span></span><br><span class="line"><span class="string">    level, and &quot;input.csv&quot;, &quot;input.xls&quot; and &quot;input.gnu&quot; for the sub-levels.</span></span><br><span class="line"><span class="string">    There is no arbitrary limit to the depth of nesting.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-源码阅读收获"><a href="#3-源码阅读收获" class="headerlink" title="3. 源码阅读收获"></a>3. 源码阅读收获</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 类作为变量,构建实例</span></span><br><span class="line">(self.loggerClass <span class="keyword">or</span> _loggerClass)(name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用变量名</span></span><br><span class="line">rv 意为 <span class="keyword">return</span> value</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将类看成是函数</span></span><br><span class="line">_logRecordFactory = LogRecord </span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新各种实例的属性值</span></span><br><span class="line">rv.__dict__.update(<span class="built_in">dict</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/" data-id="ckz9abt8k0000zdyaek8i0gle" data-title="python logging 模块探索" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          seldon 调研
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DL4j系列-项目概览</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/">seldon 调研</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/">python logging 模块探索</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/">DL4j系列-项目概览</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E8%AF%BB%E4%B9%A6-pro-html5-programming/">读书-pro-html5-programming</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E4%BA%86%E8%A7%A3webhook/">了解webhook</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

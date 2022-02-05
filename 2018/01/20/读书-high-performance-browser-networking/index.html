@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>读书-high-performance-browser-networking | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="note Networking 101  Primer on Latency and Bandwidth Speed Is a Feature latency: The time from the source sending a packet to the destination receiving it Bandwidth: Maximum throughput of a logical or">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读书-high-performance-browser-networking">
+<meta property="og:url" content="http://example.com/2018/01/20/%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="note Networking 101  Primer on Latency and Bandwidth Speed Is a Feature latency: The time from the source sending a packet to the destination receiving it Bandwidth: Maximum throughput of a logical or">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-01-20T04:18:32.000Z">
+<meta property="article:modified_time" content="2022-02-05T03:19:51.227Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-读书-high-performance-browser-networking" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2018/01/20/%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/" class="article-date">
+  <time class="dt-published" datetime="2018-01-20T04:18:32.000Z" itemprop="datePublished">2018-01-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      读书-high-performance-browser-networking
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="note"><a href="#note" class="headerlink" title="note"></a>note</h1><ul>
+<li><p>Networking 101</p>
+<ul>
+<li>Primer on Latency and Bandwidth<ul>
+<li>Speed Is a Feature<ul>
+<li>latency: The time from the source sending a packet to the destination receiving it</li>
+<li>Bandwidth: Maximum throughput of a logical or physical communication path</li>
+<li>network data rates: Network data rates are typically measured in bits per second (bps), whereas data rates for non-network equipment are typically shown in bytes per second (Bps). This is a common source of confusion, pay close attention to the units. For example, to put a 10 megabyte (MB) file “on the wire” over a 1Mbps link, we will need 80 seconds. 10MB is equal to 80Mb because there are 8 bits for every byte!</li>
+</ul>
+</li>
+<li>The Many Components of Latency<ul>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_device_bit_rates">https://en.wikipedia.org/wiki/List_of_device_bit_rates</a></li>
+</ul>
+</li>
+<li>Speed of Light and Propagation Latency<ul>
+<li>CDN: Content delivery network (CDN) services provide many benefits, but chief among them is the simple observation that distributing the content around the globe, and serving that content from a nearby location to the client, enables us to significantly reduce the propagation time of all the data packets. We may not be able to make the packets travel faster, but we can reduce the distance by strategically positioning our servers closer to the users! Leveraging a CDN to serve your data can offer significant performance benefits.</li>
+</ul>
+</li>
+<li>Last- Mile Latency</li>
+<li>Bandwidth in Core Networks</li>
+<li>Bandwidth at the Network Edge</li>
+<li>Delivering Higher Bandwidth and Lower Latencies</li>
+</ul>
+</li>
+<li>Building Blocks of TCP<ul>
+<li>introduction<ul>
+<li>The HTTP standard does not mandate TCP as the only transport protocol. If we wanted, we could deliver HTTP via a datagram socket (User Datagram Protocol or UDP), or any other transport protocol of our choice, but in practice all HTTP traffic on the Internet today is delivered via TCP due to the many great and convenient features it provides out of the box.</li>
+</ul>
+</li>
+<li>Three- Way Handshake</li>
+<li>Congestion Avoidance and Control</li>
+<li>Bandwidth- Delay Product</li>
+<li>Head- of- Line Blocking</li>
+<li>Optimizing for TCP<ul>
+<li>Performance Checklist<ul>
+<li>Optimizing TCP performance pays high dividends, regardless of the type of application, for every new connection to your servers. A short list to put on the agenda:</li>
+<li>Upgrade server kernel to latest version.</li>
+<li>Ensure that cwnd size is set to 10.</li>
+<li>Ensure that window scaling is enabled.</li>
+<li>Disable slow-start after idle.</li>
+<li>Investigate enabling TCP Fast Open.</li>
+<li>Eliminate redundant data transfers.</li>
+<li>Compress transferred data.</li>
+<li>Position servers closer to the user to reduce roundtrip times.</li>
+<li>Reuse TCP connections whenever possible.</li>
+<li>Investigate “TCP Tuning for HTTP” recommendations.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Building Blocks of UDP<ul>
+<li>Null Protocol Services</li>
+<li>UDP and Network Address Translators</li>
+<li>Optimizing for UDP</li>
+</ul>
+</li>
+<li>Transport Layer Security (TLS)<ul>
+<li>Encryption, Authentication, and Integrity</li>
+<li>HTTPS Everywhere</li>
+<li>TLS Handshake</li>
+<li>TLS Session Resumption</li>
+<li>Chain of Trust and Certificate Authorities</li>
+<li>Certificate Revocation</li>
+<li>TLS Record Protocol</li>
+<li>Optimizing for TLS</li>
+<li>Testing and Verification</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Performance of Wireless Networks</p>
+<ul>
+<li>Introduction to Wireless Networks<ul>
+<li>Ubiquitous Connectivity</li>
+<li>Types of Wireless Networks</li>
+<li>Performance Fundamentals of Wireless Networks</li>
+<li>Measuring Real- World Wireless Performance</li>
+</ul>
+</li>
+<li>WiFi<ul>
+<li>From Ethernet to a Wireless LAN</li>
+<li>WiFi Standards and Features</li>
+<li>Measuring and Optimizing WiFi Performance</li>
+<li>Optimizing for WiFi Networks</li>
+</ul>
+</li>
+<li>Mobile Networks<ul>
+<li>Brief History of the G’s</li>
+<li>Device Features and Capabilities</li>
+<li>Radio Resource Controller (RRC)</li>
+<li>End- to- End Carrier Architecture</li>
+<li>Packet Flow in a Mobile Network</li>
+<li>Heterogeneous Networks (HetNets)</li>
+<li>Real- World 3G, 4G, and WiFi Performance</li>
+</ul>
+</li>
+<li>Optimizing for Mobile Networks<ul>
+<li>Preserve Battery Power</li>
+<li>Eliminate Periodic and Inefficient Data Transfers</li>
+<li>Anticipate Network Latency Overhead</li>
+<li>Design for Variable Network Interface Availability</li>
+<li>Burst Your Data and Return to Idle</li>
+<li>Offload to WiFi Networks</li>
+<li>Apply Protocol and Application Best Practices</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>HTTP</p>
+<ul>
+<li>Brief History of HTTP<ul>
+<li>HTTP 0.9: The One- Line Protocol</li>
+<li>HTTP&#x2F;1.0: Rapid Growth and Informational RFC</li>
+<li>HTTP&#x2F;1.1: Internet Standard</li>
+<li>HTTP&#x2F;2: Improving Transport Performance</li>
+</ul>
+</li>
+<li>Primer on Web Performance<ul>
+<li>Hypertext, Web Pages, and Web Applications</li>
+<li>Anatomy of a Modern Web Application</li>
+<li>Performance Pillars: Computing, Rendering, Networking</li>
+<li>Synthetic and Real- User Performance Measurement</li>
+<li>Browser Optimization</li>
+</ul>
+</li>
+<li>HTTP&#x2F;1.X<ul>
+<li>Benefits of Keepalive Connections</li>
+<li>HTTP Pipelining</li>
+<li>Using Multiple TCP Connections</li>
+<li>Domain Sharding</li>
+<li>Measuring and Controlling Protocol Overhead</li>
+<li>Concatenation and Spriting</li>
+<li>Resource Inlining</li>
+</ul>
+</li>
+<li>HTTP&#x2F;2<ul>
+<li>Brief History of SPDY and HTTP&#x2F;2</li>
+<li>Design and Technical Goals</li>
+<li>Binary Framing Layer</li>
+<li>Streams, Messages, and Frames</li>
+<li>Request and Response Multiplexing</li>
+<li>Stream Prioritization</li>
+<li>One Connection Per Origin</li>
+<li>Flow Control</li>
+<li>Server Push</li>
+<li>Header Compression</li>
+<li>Upgrading to HTTP&#x2F;2</li>
+<li>Brief Introduction to Binary Framing</li>
+</ul>
+</li>
+<li>Optimizing Application Delivery<ul>
+<li>Optimizing Physical and Transport Layers</li>
+<li>Evergreen Performance Best Practices</li>
+<li>Optimizing for HTTP&#x2F;1.x</li>
+<li>Optimizing for HTTP&#x2F;2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Browser APIs and Protocols</p>
+<ul>
+<li>Primer on Browser Networking<ul>
+<li>Connection Management and Optimization</li>
+<li>Network Security and Sandboxing</li>
+<li>Resource and Client State Caching</li>
+<li>Application APIs and Protocols</li>
+</ul>
+</li>
+<li>XMLHttpRequest<ul>
+<li>Brief History of XHR</li>
+<li>Cross- Origin Resource Sharing (CORS)</li>
+<li>Downloading Data with XHR</li>
+<li>Uploading Data with XHR</li>
+<li>Monitoring Download and Upload Progress</li>
+<li>Streaming Data with XHR</li>
+<li>Real- Time Notifications and Delivery</li>
+<li>XHR Use Cases and Performance</li>
+</ul>
+</li>
+<li>Server- Sent Events (SSE)<ul>
+<li><p>intro</p>
+<ul>
+<li>SSE 底层实现是通过a single long-lived HTTP connection</li>
+</ul>
+</li>
+<li><p>EventSource API</p>
+<ul>
+<li>EventSource也可以利用CORS的权限机制进行跨域请求</li>
+<li>SSE是内存高效的,因为可以不用将所有收到的数据放到内存中,处理过后的信息直接扔掉,但是XHR必须要全部缓冲所有response数据</li>
+<li>SSE底层可以自动重连</li>
+<li>现代浏览器基本都支持SSE,除了IE和stock android浏览器. 但是浏览器原生不支持,也可以通过JS库(polyfill)来enable SSE.<ul>
+<li>但是 polyfill底层是XHR polling,所以并不能保证高效</li>
+</ul>
+</li>
+<li>总结一下 web stream 的几种方法<ul>
+<li>XHR polling</li>
+<li>XHR long-polling</li>
+<li>XHR streaming</li>
+<li>浏览器原生支持的XHR streaming,原生支持更为高校</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Event Stream Protocol</p>
+<ul>
+<li>client initiate regular HTTP request</li>
+<li>server responds with a custom text&#x2F;event-stream content-type, then streams the UTF-8 encoded event data.</li>
+<li>protocal:<ul>
+<li>Event payload is the value of one or more adjacent data fields.</li>
+<li>Event may carry an optional ID and an event type string.</li>
+<li>Event boundaries are marked by newlines.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SSE Use Cases and Performance</p>
+</li>
+</ul>
+</li>
+<li>WebSocket<ul>
+<li>WebSocket API</li>
+<li>WebSocket Protocol</li>
+<li>WebSocket Use Cases and Performance</li>
+<li>Performance Checklist</li>
+</ul>
+</li>
+<li>WebRTC<ul>
+<li>Standards and Development of WebRTC</li>
+<li>Audio and Video Engines</li>
+<li>Real- Time Network Transports</li>
+<li>Establishing a Peer- to- Peer Connection</li>
+<li>Delivering Media and Application Data</li>
+<li>DataChannel</li>
+<li>WebRTC Use Cases and Performance</li>
+<li>Performance Checklist</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2018/01/20/%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/" data-id="ckz9abt92000gzdyada17f9bs" data-title="读书-high-performance-browser-networking" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/21/%E8%AF%BB%E4%B9%A6-understaning-ECMAScript-6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          读书-understaning-ECMAScript-6
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/13/%E7%BC%96%E7%A0%81-%E9%9A%90%E5%8C%BF%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%83%8C%E5%90%8E%E7%9A%84%E8%AF%AD%E8%A8%80%E4%B8%8A/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">编码-隐匿在计算机软硬件背后的语言上</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/">seldon 调研</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/">python logging 模块探索</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/10/DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/">DL4j系列-项目概览</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E8%AF%BB%E4%B9%A6-pro-html5-programming/">读书-pro-html5-programming</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/02/%E4%BA%86%E8%A7%A3webhook/">了解webhook</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
