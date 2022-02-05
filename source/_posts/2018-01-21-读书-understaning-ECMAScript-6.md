@@ -1,8 +1,8 @@
 ---
-title: 读书-understaning-ECMAScript-6
+title: 前端系列（三） -understaning-ECMAScript-6
 date: 2018-01-21 14:15:41
 tags: 读书
-categories: 工程开发系列
+categories: 前端系列
 ---
 
 # chapter 1
