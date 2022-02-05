@@ -238,7 +238,7 @@ profile:
   # My Personal Works
   works:
     name:
-      link: http://www.example.com
+      link: https://chesterwang.github.io/ 
       date: 2016
   # My Personal Projects
   projects:
