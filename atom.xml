@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://chesterwang.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://chesterwang.github.io/"/>
   <updated>2022-02-05T04:57:38.017Z</updated>
-  <id>http://example.com/</id>
+  <id>https://chesterwang.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>广告算法系列（一） 2020腾讯算法大赛</title>
-    <link href="http://example.com/2022/02/05/2022-02-05-%E5%B9%BF%E5%91%8A%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%202020%E8%85%BE%E8%AE%AF%E7%AE%97%E6%B3%95%E5%A4%A7%E8%B5%9B/"/>
-    <id>http://example.com/2022/02/05/2022-02-05-%E5%B9%BF%E5%91%8A%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%202020%E8%85%BE%E8%AE%AF%E7%AE%97%E6%B3%95%E5%A4%A7%E8%B5%9B/</id>
+    <link href="https://chesterwang.github.io/2022/02/05/2022-02-05-%E5%B9%BF%E5%91%8A%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%202020%E8%85%BE%E8%AE%AF%E7%AE%97%E6%B3%95%E5%A4%A7%E8%B5%9B/"/>
+    <id>https://chesterwang.github.io/2022/02/05/2022-02-05-%E5%B9%BF%E5%91%8A%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89%202020%E8%85%BE%E8%AE%AF%E7%AE%97%E6%B3%95%E5%A4%A7%E8%B5%9B/</id>
     <published>2022-02-05T04:50:31.000Z</published>
     <updated>2022-02-05T04:57:38.017Z</updated>
     
@@ -30,15 +30,15 @@
     
     
     
-    <category term="广告算法系列" scheme="http://example.com/categories/%E5%B9%BF%E5%91%8A%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97/"/>
+    <category term="广告算法系列" scheme="https://chesterwang.github.io/categories/%E5%B9%BF%E5%91%8A%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>AI工程化系列（二） seldon 调研</title>
-    <link href="http://example.com/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/"/>
-    <id>http://example.com/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/</id>
+    <link href="https://chesterwang.github.io/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/"/>
+    <id>https://chesterwang.github.io/2019/11/25/2019-11-25-seldon%20%E8%B0%83%E7%A0%94/</id>
     <published>2019-11-25T14:42:06.000Z</published>
     <updated>2022-02-05T04:53:52.357Z</updated>
     
@@ -49,15 +49,15 @@
     
     
     
-    <category term="AI工程化系列" scheme="http://example.com/categories/AI%E5%B7%A5%E7%A8%8B%E5%8C%96%E7%B3%BB%E5%88%97/"/>
+    <category term="AI工程化系列" scheme="https://chesterwang.github.io/categories/AI%E5%B7%A5%E7%A8%8B%E5%8C%96%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>python logging 模块探索</title>
-    <link href="http://example.com/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/"/>
-    <id>http://example.com/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/</id>
+    <link href="https://chesterwang.github.io/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/"/>
+    <id>https://chesterwang.github.io/2019/11/25/2019-11-25-python%20logging%20%E6%A8%A1%E5%9D%97%E6%8E%A2%E7%B4%A2/</id>
     <published>2019-11-24T16:47:41.000Z</published>
     <updated>2022-02-05T04:31:48.857Z</updated>
     
@@ -68,15 +68,15 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>DAI工程化系列（一） L4j系列-项目概览</title>
-    <link href="http://example.com/2018/06/10/2018-06-10-DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/"/>
-    <id>http://example.com/2018/06/10/2018-06-10-DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/</id>
+    <link href="https://chesterwang.github.io/2018/06/10/2018-06-10-DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/"/>
+    <id>https://chesterwang.github.io/2018/06/10/2018-06-10-DL4j%E7%B3%BB%E5%88%97-%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%A7%88/</id>
     <published>2018-06-10T04:36:42.000Z</published>
     <updated>2022-02-05T04:53:44.667Z</updated>
     
@@ -94,15 +94,15 @@
     
     
     
-    <category term="AI工程化系列" scheme="http://example.com/categories/AI%E5%B7%A5%E7%A8%8B%E5%8C%96%E7%B3%BB%E5%88%97/"/>
+    <category term="AI工程化系列" scheme="https://chesterwang.github.io/categories/AI%E5%B7%A5%E7%A8%8B%E5%8C%96%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>前端系列（五） pro-html5-programming</title>
-    <link href="http://example.com/2018/02/02/2018-02-02-%E8%AF%BB%E4%B9%A6-pro-html5-programming/"/>
-    <id>http://example.com/2018/02/02/2018-02-02-%E8%AF%BB%E4%B9%A6-pro-html5-programming/</id>
+    <link href="https://chesterwang.github.io/2018/02/02/2018-02-02-%E8%AF%BB%E4%B9%A6-pro-html5-programming/"/>
+    <id>https://chesterwang.github.io/2018/02/02/2018-02-02-%E8%AF%BB%E4%B9%A6-pro-html5-programming/</id>
     <published>2018-02-02T14:26:58.000Z</published>
     <updated>2022-02-05T04:56:54.517Z</updated>
     
@@ -116,17 +116,17 @@
     
     
     
-    <category term="前端系列" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
+    <category term="前端系列" scheme="https://chesterwang.github.io/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>了解webhook</title>
-    <link href="http://example.com/2018/02/02/2018-02-02-%E4%BA%86%E8%A7%A3webhook/"/>
-    <id>http://example.com/2018/02/02/2018-02-02-%E4%BA%86%E8%A7%A3webhook/</id>
+    <link href="https://chesterwang.github.io/2018/02/02/2018-02-02-%E4%BA%86%E8%A7%A3webhook/"/>
+    <id>https://chesterwang.github.io/2018/02/02/2018-02-02-%E4%BA%86%E8%A7%A3webhook/</id>
     <published>2018-02-02T13:15:12.000Z</published>
     <updated>2022-02-05T04:29:08.547Z</updated>
     
@@ -141,15 +141,15 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>前端系列（四） -Programming-JavaScript-Applications</title>
-    <link href="http://example.com/2018/01/23/2018-01-23-%E8%AF%BB%E4%B9%A6-Programming-JavaScript-Applications/"/>
-    <id>http://example.com/2018/01/23/2018-01-23-%E8%AF%BB%E4%B9%A6-Programming-JavaScript-Applications/</id>
+    <link href="https://chesterwang.github.io/2018/01/23/2018-01-23-%E8%AF%BB%E4%B9%A6-Programming-JavaScript-Applications/"/>
+    <id>https://chesterwang.github.io/2018/01/23/2018-01-23-%E8%AF%BB%E4%B9%A6-Programming-JavaScript-Applications/</id>
     <published>2018-01-22T16:01:52.000Z</published>
     <updated>2022-02-05T04:56:33.307Z</updated>
     
@@ -163,17 +163,17 @@
     
     
     
-    <category term="前端系列" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
+    <category term="前端系列" scheme="https://chesterwang.github.io/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>读书-static-site-generators</title>
-    <link href="http://example.com/2018/01/22/2018-01-22-%E8%AF%BB%E4%B9%A6-static-site-generators/"/>
-    <id>http://example.com/2018/01/22/2018-01-22-%E8%AF%BB%E4%B9%A6-static-site-generators/</id>
+    <link href="https://chesterwang.github.io/2018/01/22/2018-01-22-%E8%AF%BB%E4%B9%A6-static-site-generators/"/>
+    <id>https://chesterwang.github.io/2018/01/22/2018-01-22-%E8%AF%BB%E4%B9%A6-static-site-generators/</id>
     <published>2018-01-22T12:57:01.000Z</published>
     <updated>2022-02-05T04:34:20.587Z</updated>
     
@@ -191,17 +191,17 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>前端系列（三） -understaning-ECMAScript-6</title>
-    <link href="http://example.com/2018/01/21/2018-01-21-%E8%AF%BB%E4%B9%A6-understaning-ECMAScript-6/"/>
-    <id>http://example.com/2018/01/21/2018-01-21-%E8%AF%BB%E4%B9%A6-understaning-ECMAScript-6/</id>
+    <link href="https://chesterwang.github.io/2018/01/21/2018-01-21-%E8%AF%BB%E4%B9%A6-understaning-ECMAScript-6/"/>
+    <id>https://chesterwang.github.io/2018/01/21/2018-01-21-%E8%AF%BB%E4%B9%A6-understaning-ECMAScript-6/</id>
     <published>2018-01-21T06:15:41.000Z</published>
     <updated>2022-02-05T04:56:22.287Z</updated>
     
@@ -217,17 +217,17 @@
     
     
     
-    <category term="前端系列" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
+    <category term="前端系列" scheme="https://chesterwang.github.io/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>前端系列（二） 读书-high-performance-browser-networking</title>
-    <link href="http://example.com/2018/01/20/2018-01-20-%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/"/>
-    <id>http://example.com/2018/01/20/2018-01-20-%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/</id>
+    <link href="https://chesterwang.github.io/2018/01/20/2018-01-20-%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/"/>
+    <id>https://chesterwang.github.io/2018/01/20/2018-01-20-%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/</id>
     <published>2018-01-20T04:18:32.000Z</published>
     <updated>2022-02-05T04:56:14.767Z</updated>
     
@@ -244,17 +244,17 @@
     
     
     
-    <category term="前端系列" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
+    <category term="前端系列" scheme="https://chesterwang.github.io/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>编码-隐匿在计算机软硬件背后的语言上</title>
-    <link href="http://example.com/2018/01/13/2018-01-13-%E7%BC%96%E7%A0%81-%E9%9A%90%E5%8C%BF%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%83%8C%E5%90%8E%E7%9A%84%E8%AF%AD%E8%A8%80%E4%B8%8A/"/>
-    <id>http://example.com/2018/01/13/2018-01-13-%E7%BC%96%E7%A0%81-%E9%9A%90%E5%8C%BF%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%83%8C%E5%90%8E%E7%9A%84%E8%AF%AD%E8%A8%80%E4%B8%8A/</id>
+    <link href="https://chesterwang.github.io/2018/01/13/2018-01-13-%E7%BC%96%E7%A0%81-%E9%9A%90%E5%8C%BF%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%83%8C%E5%90%8E%E7%9A%84%E8%AF%AD%E8%A8%80%E4%B8%8A/"/>
+    <id>https://chesterwang.github.io/2018/01/13/2018-01-13-%E7%BC%96%E7%A0%81-%E9%9A%90%E5%8C%BF%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%83%8C%E5%90%8E%E7%9A%84%E8%AF%AD%E8%A8%80%E4%B8%8A/</id>
     <published>2018-01-13T14:20:16.000Z</published>
     <updated>2022-02-05T04:34:11.557Z</updated>
     
@@ -265,17 +265,17 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>前端系列（一） ajax</title>
-    <link href="http://example.com/2018/01/12/2018-01-12-ajax/"/>
-    <id>http://example.com/2018/01/12/2018-01-12-ajax/</id>
+    <link href="https://chesterwang.github.io/2018/01/12/2018-01-12-ajax/"/>
+    <id>https://chesterwang.github.io/2018/01/12/2018-01-12-ajax/</id>
     <published>2018-01-12T12:56:47.000Z</published>
     <updated>2022-02-05T04:56:03.887Z</updated>
     
@@ -291,15 +291,15 @@
     
     
     
-    <category term="前端系列" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
+    <category term="前端系列" scheme="https://chesterwang.github.io/categories/%E5%89%8D%E7%AB%AF%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>全栈之路</title>
-    <link href="http://example.com/2018/01/10/2018-01-10-%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/"/>
-    <id>http://example.com/2018/01/10/2018-01-10-%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/</id>
+    <link href="https://chesterwang.github.io/2018/01/10/2018-01-10-%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/"/>
+    <id>https://chesterwang.github.io/2018/01/10/2018-01-10-%E5%85%A8%E6%A0%88%E4%B9%8B%E8%B7%AF/</id>
     <published>2018-01-10T13:07:22.000Z</published>
     <updated>2022-02-05T04:55:07.697Z</updated>
     
@@ -314,15 +314,15 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>读书  Front-End Developer Handbook 2017</title>
-    <link href="http://example.com/2018/01/10/2018-01-10-%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/"/>
-    <id>http://example.com/2018/01/10/2018-01-10-%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/</id>
+    <link href="https://chesterwang.github.io/2018/01/10/2018-01-10-%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/"/>
+    <id>https://chesterwang.github.io/2018/01/10/2018-01-10-%E8%AF%BB%E4%B9%A6-Front-End-Developer-Handbook-2017/</id>
     <published>2018-01-09T17:18:06.000Z</published>
     <updated>2022-02-05T04:55:45.027Z</updated>
     
@@ -337,17 +337,17 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>HFHT算法</title>
-    <link href="http://example.com/2018/01/09/2018-01-09-HFHT%E7%AE%97%E6%B3%95/"/>
-    <id>http://example.com/2018/01/09/2018-01-09-HFHT%E7%AE%97%E6%B3%95/</id>
+    <link href="https://chesterwang.github.io/2018/01/09/2018-01-09-HFHT%E7%AE%97%E6%B3%95/"/>
+    <id>https://chesterwang.github.io/2018/01/09/2018-01-09-HFHT%E7%AE%97%E6%B3%95/</id>
     <published>2018-01-09T14:35:25.000Z</published>
     <updated>2022-02-05T04:30:06.607Z</updated>
     
@@ -361,15 +361,15 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
   </entry>
   
   <entry>
     <title>读书笔记&lt;&lt;全栈应用开发：精益实践&gt;&gt;</title>
-    <link href="http://example.com/2018/01/09/2018-01-09-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/"/>
-    <id>http://example.com/2018/01/09/2018-01-09-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/</id>
+    <link href="https://chesterwang.github.io/2018/01/09/2018-01-09-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/"/>
+    <id>https://chesterwang.github.io/2018/01/09/2018-01-09-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%85%A8%E6%A0%88%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%EF%BC%9A%E7%B2%BE%E7%9B%8A%E5%AE%9E%E8%B7%B5/</id>
     <published>2018-01-08T17:51:24.000Z</published>
     <updated>2022-02-05T04:55:22.357Z</updated>
     
@@ -387,17 +387,17 @@
     
     
     
-    <category term="工程开发系列" scheme="http://example.com/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
+    <category term="工程开发系列" scheme="https://chesterwang.github.io/categories/%E5%B7%A5%E7%A8%8B%E5%BC%80%E5%8F%91%E7%B3%BB%E5%88%97/"/>
     
     
-    <category term="读书" scheme="http://example.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://chesterwang.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2018/01/01/2018-01-01-hello-world/"/>
-    <id>http://example.com/2018/01/01/2018-01-01-hello-world/</id>
+    <link href="https://chesterwang.github.io/2018/01/01/2018-01-01-hello-world/"/>
+    <id>https://chesterwang.github.io/2018/01/01/2018-01-01-hello-world/</id>
     <published>2018-01-01T14:35:25.000Z</published>
     <updated>2022-02-05T04:30:23.867Z</updated>
     
