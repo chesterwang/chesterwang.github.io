@@ -6,7 +6,7 @@
   <link href="https://chesterwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://chesterwang.github.io/"/>
-  <updated>2022-02-05T04:57:38.017Z</updated>
+  <updated>2022-02-06T03:56:15.053Z</updated>
   <id>https://chesterwang.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022-02-06-把验光放长远</title>
+    <link href="https://chesterwang.github.io/2022/02/06/2022-02-06-%E6%8A%8A%E9%AA%8C%E5%85%89%E6%94%BE%E9%95%BF%E8%BF%9C/"/>
+    <id>https://chesterwang.github.io/2022/02/06/2022-02-06-%E6%8A%8A%E9%AA%8C%E5%85%89%E6%94%BE%E9%95%BF%E8%BF%9C/</id>
+    <published>2022-02-06T03:54:24.000Z</published>
+    <updated>2022-02-06T03:56:15.053Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+
+</summary>
+      
+    
+    
+    
+    <category term="把验光放长远" scheme="https://chesterwang.github.io/categories/%E6%8A%8A%E9%AA%8C%E5%85%89%E6%94%BE%E9%95%BF%E8%BF%9C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>算法论文系列（一） 梯度优化算法综述</title>
+    <link href="https://chesterwang.github.io/2022/02/06/2022-02-06-%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-%E6%A2%AF%E5%BA%A6%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%BB%BC%E8%BF%B0/"/>
+    <id>https://chesterwang.github.io/2022/02/06/2022-02-06-%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87%E7%B3%BB%E5%88%97%EF%BC%88%E4%B8%80%EF%BC%89-%E6%A2%AF%E5%BA%A6%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E7%BB%BC%E8%BF%B0/</id>
+    <published>2022-02-06T03:49:56.000Z</published>
+    <updated>2022-02-06T03:53:05.563Z</updated>
+    
+    <content type="html"><![CDATA[<p>An overview of gradient descent optimization algorithms.</p><span id="more"></span><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol><li>Ruder S. An overview of gradient descent optimization algorithms[J]. arXiv preprint arXiv:1609.04747, 2016.</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;An overview of gradient descent optimization algorithms.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="算法论文系列" scheme="https://chesterwang.github.io/categories/%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87%E7%B3%BB%E5%88%97/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>广告算法系列（一） 2020腾讯算法大赛</title>
