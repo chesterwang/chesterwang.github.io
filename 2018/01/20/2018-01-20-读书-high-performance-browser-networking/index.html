@@ -18,12 +18,12 @@
   
   
   <title>前端系列（二） 读书-high-performance-browser-networking | Hexo</title>
-  <meta name="description" content="note Networking 101  Primer on Latency and Bandwidth Speed Is a Feature latency: The time from the source sending a packet to the destination receiving it Bandwidth: Maximum throughput of a logical or">
+  <meta name="description" content="note   Networking 101  Primer on Latency and Bandwidth  Speed Is a Feature  latency: The time from the source sending a packet to the destination receiving it Bandwidth: Maximum throughput of a logic">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端系列（二） 读书-high-performance-browser-networking">
 <meta property="og:url" content="https://chesterwang.github.io/2018/01/20/2018-01-20-%E8%AF%BB%E4%B9%A6-high-performance-browser-networking/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="note Networking 101  Primer on Latency and Bandwidth Speed Is a Feature latency: The time from the source sending a packet to the destination receiving it Bandwidth: Maximum throughput of a logical or">
+<meta property="og:description" content="note   Networking 101  Primer on Latency and Bandwidth  Speed Is a Feature  latency: The time from the source sending a packet to the destination receiving it Bandwidth: Maximum throughput of a logic">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-01-20T04:18:32.000Z">
 <meta property="article:modified_time" content="2022-02-05T04:56:14.767Z">
@@ -395,21 +395,27 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="note"><a href="#note" class="headerlink" title="note"></a>note</h1><ul>
-<li><p>Networking 101</p>
+        <h1 id="note"><a class="markdownIt-Anchor" href="#note"></a> note</h1>
 <ul>
-<li>Primer on Latency and Bandwidth<ul>
-<li>Speed Is a Feature<ul>
+<li>
+<p>Networking 101</p>
+<ul>
+<li>Primer on Latency and Bandwidth
+<ul>
+<li>Speed Is a Feature
+<ul>
 <li>latency: The time from the source sending a packet to the destination receiving it</li>
 <li>Bandwidth: Maximum throughput of a logical or physical communication path</li>
 <li>network data rates: Network data rates are typically measured in bits per second (bps), whereas data rates for non-network equipment are typically shown in bytes per second (Bps). This is a common source of confusion, pay close attention to the units. For example, to put a 10 megabyte (MB) file “on the wire” over a 1Mbps link, we will need 80 seconds. 10MB is equal to 80Mb because there are 8 bits for every byte!</li>
 </ul>
 </li>
-<li>The Many Components of Latency<ul>
+<li>The Many Components of Latency
+<ul>
 <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_device_bit_rates">https://en.wikipedia.org/wiki/List_of_device_bit_rates</a></li>
 </ul>
 </li>
-<li>Speed of Light and Propagation Latency<ul>
+<li>Speed of Light and Propagation Latency
+<ul>
 <li>CDN: Content delivery network (CDN) services provide many benefits, but chief among them is the simple observation that distributing the content around the globe, and serving that content from a nearby location to the client, enables us to significantly reduce the propagation time of all the data packets. We may not be able to make the packets travel faster, but we can reduce the distance by strategically positioning our servers closer to the users! Leveraging a CDN to serve your data can offer significant performance benefits.</li>
 </ul>
 </li>
@@ -419,8 +425,10 @@
 <li>Delivering Higher Bandwidth and Lower Latencies</li>
 </ul>
 </li>
-<li>Building Blocks of TCP<ul>
-<li>introduction<ul>
+<li>Building Blocks of TCP
+<ul>
+<li>introduction
+<ul>
 <li>The HTTP standard does not mandate TCP as the only transport protocol. If we wanted, we could deliver HTTP via a datagram socket (User Datagram Protocol or UDP), or any other transport protocol of our choice, but in practice all HTTP traffic on the Internet today is delivered via TCP due to the many great and convenient features it provides out of the box.</li>
 </ul>
 </li>
@@ -428,8 +436,10 @@
 <li>Congestion Avoidance and Control</li>
 <li>Bandwidth- Delay Product</li>
 <li>Head- of- Line Blocking</li>
-<li>Optimizing for TCP<ul>
-<li>Performance Checklist<ul>
+<li>Optimizing for TCP
+<ul>
+<li>Performance Checklist
+<ul>
 <li>Optimizing TCP performance pays high dividends, regardless of the type of application, for every new connection to your servers. A short list to put on the agenda:</li>
 <li>Upgrade server kernel to latest version.</li>
 <li>Ensure that cwnd size is set to 10.</li>
@@ -447,13 +457,15 @@
 </li>
 </ul>
 </li>
-<li>Building Blocks of UDP<ul>
+<li>Building Blocks of UDP
+<ul>
 <li>Null Protocol Services</li>
 <li>UDP and Network Address Translators</li>
 <li>Optimizing for UDP</li>
 </ul>
 </li>
-<li>Transport Layer Security (TLS)<ul>
+<li>Transport Layer Security (TLS)
+<ul>
 <li>Encryption, Authentication, and Integrity</li>
 <li>HTTPS Everywhere</li>
 <li>TLS Handshake</li>
@@ -467,23 +479,27 @@
 </li>
 </ul>
 </li>
-<li><p>Performance of Wireless Networks</p>
+<li>
+<p>Performance of Wireless Networks</p>
 <ul>
-<li>Introduction to Wireless Networks<ul>
+<li>Introduction to Wireless Networks
+<ul>
 <li>Ubiquitous Connectivity</li>
 <li>Types of Wireless Networks</li>
 <li>Performance Fundamentals of Wireless Networks</li>
 <li>Measuring Real- World Wireless Performance</li>
 </ul>
 </li>
-<li>WiFi<ul>
+<li>WiFi
+<ul>
 <li>From Ethernet to a Wireless LAN</li>
 <li>WiFi Standards and Features</li>
 <li>Measuring and Optimizing WiFi Performance</li>
 <li>Optimizing for WiFi Networks</li>
 </ul>
 </li>
-<li>Mobile Networks<ul>
+<li>Mobile Networks
+<ul>
 <li>Brief History of the G’s</li>
 <li>Device Features and Capabilities</li>
 <li>Radio Resource Controller (RRC)</li>
@@ -493,7 +509,8 @@
 <li>Real- World 3G, 4G, and WiFi Performance</li>
 </ul>
 </li>
-<li>Optimizing for Mobile Networks<ul>
+<li>Optimizing for Mobile Networks
+<ul>
 <li>Preserve Battery Power</li>
 <li>Eliminate Periodic and Inefficient Data Transfers</li>
 <li>Anticipate Network Latency Overhead</li>
@@ -505,16 +522,19 @@
 </li>
 </ul>
 </li>
-<li><p>HTTP</p>
+<li>
+<p>HTTP</p>
 <ul>
-<li>Brief History of HTTP<ul>
+<li>Brief History of HTTP
+<ul>
 <li>HTTP 0.9: The One- Line Protocol</li>
-<li>HTTP&#x2F;1.0: Rapid Growth and Informational RFC</li>
-<li>HTTP&#x2F;1.1: Internet Standard</li>
-<li>HTTP&#x2F;2: Improving Transport Performance</li>
+<li>HTTP/1.0: Rapid Growth and Informational RFC</li>
+<li>HTTP/1.1: Internet Standard</li>
+<li>HTTP/2: Improving Transport Performance</li>
 </ul>
 </li>
-<li>Primer on Web Performance<ul>
+<li>Primer on Web Performance
+<ul>
 <li>Hypertext, Web Pages, and Web Applications</li>
 <li>Anatomy of a Modern Web Application</li>
 <li>Performance Pillars: Computing, Rendering, Networking</li>
@@ -522,7 +542,8 @@
 <li>Browser Optimization</li>
 </ul>
 </li>
-<li>HTTP&#x2F;1.X<ul>
+<li>HTTP/1.X
+<ul>
 <li>Benefits of Keepalive Connections</li>
 <li>HTTP Pipelining</li>
 <li>Using Multiple TCP Connections</li>
@@ -532,8 +553,9 @@
 <li>Resource Inlining</li>
 </ul>
 </li>
-<li>HTTP&#x2F;2<ul>
-<li>Brief History of SPDY and HTTP&#x2F;2</li>
+<li>HTTP/2
+<ul>
+<li>Brief History of SPDY and HTTP/2</li>
 <li>Design and Technical Goals</li>
 <li>Binary Framing Layer</li>
 <li>Streams, Messages, and Frames</li>
@@ -543,29 +565,33 @@
 <li>Flow Control</li>
 <li>Server Push</li>
 <li>Header Compression</li>
-<li>Upgrading to HTTP&#x2F;2</li>
+<li>Upgrading to HTTP/2</li>
 <li>Brief Introduction to Binary Framing</li>
 </ul>
 </li>
-<li>Optimizing Application Delivery<ul>
+<li>Optimizing Application Delivery
+<ul>
 <li>Optimizing Physical and Transport Layers</li>
 <li>Evergreen Performance Best Practices</li>
-<li>Optimizing for HTTP&#x2F;1.x</li>
-<li>Optimizing for HTTP&#x2F;2</li>
+<li>Optimizing for HTTP/1.x</li>
+<li>Optimizing for HTTP/2</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>Browser APIs and Protocols</p>
+<li>
+<p>Browser APIs and Protocols</p>
 <ul>
-<li>Primer on Browser Networking<ul>
+<li>Primer on Browser Networking
+<ul>
 <li>Connection Management and Optimization</li>
 <li>Network Security and Sandboxing</li>
 <li>Resource and Client State Caching</li>
 <li>Application APIs and Protocols</li>
 </ul>
 </li>
-<li>XMLHttpRequest<ul>
+<li>XMLHttpRequest
+<ul>
 <li>Brief History of XHR</li>
 <li>Cross- Origin Resource Sharing (CORS)</li>
 <li>Downloading Data with XHR</li>
@@ -576,22 +602,27 @@
 <li>XHR Use Cases and Performance</li>
 </ul>
 </li>
-<li>Server- Sent Events (SSE)<ul>
-<li><p>intro</p>
+<li>Server- Sent Events (SSE)
+<ul>
+<li>
+<p>intro</p>
 <ul>
 <li>SSE 底层实现是通过a single long-lived HTTP connection</li>
 </ul>
 </li>
-<li><p>EventSource API</p>
+<li>
+<p>EventSource API</p>
 <ul>
 <li>EventSource也可以利用CORS的权限机制进行跨域请求</li>
 <li>SSE是内存高效的,因为可以不用将所有收到的数据放到内存中,处理过后的信息直接扔掉,但是XHR必须要全部缓冲所有response数据</li>
 <li>SSE底层可以自动重连</li>
-<li>现代浏览器基本都支持SSE,除了IE和stock android浏览器. 但是浏览器原生不支持,也可以通过JS库(polyfill)来enable SSE.<ul>
+<li>现代浏览器基本都支持SSE,除了IE和stock android浏览器. 但是浏览器原生不支持,也可以通过JS库(polyfill)来enable SSE.
+<ul>
 <li>但是 polyfill底层是XHR polling,所以并不能保证高效</li>
 </ul>
 </li>
-<li>总结一下 web stream 的几种方法<ul>
+<li>总结一下 web stream 的几种方法
+<ul>
 <li>XHR polling</li>
 <li>XHR long-polling</li>
 <li>XHR streaming</li>
@@ -600,11 +631,13 @@
 </li>
 </ul>
 </li>
-<li><p>Event Stream Protocol</p>
+<li>
+<p>Event Stream Protocol</p>
 <ul>
 <li>client initiate regular HTTP request</li>
-<li>server responds with a custom text&#x2F;event-stream content-type, then streams the UTF-8 encoded event data.</li>
-<li>protocal:<ul>
+<li>server responds with a custom text/event-stream content-type, then streams the UTF-8 encoded event data.</li>
+<li>protocal:
+<ul>
 <li>Event payload is the value of one or more adjacent data fields.</li>
 <li>Event may carry an optional ID and an event type string.</li>
 <li>Event boundaries are marked by newlines.</li>
@@ -612,18 +645,21 @@
 </li>
 </ul>
 </li>
-<li><p>SSE Use Cases and Performance</p>
+<li>
+<p>SSE Use Cases and Performance</p>
 </li>
 </ul>
 </li>
-<li>WebSocket<ul>
+<li>WebSocket
+<ul>
 <li>WebSocket API</li>
 <li>WebSocket Protocol</li>
 <li>WebSocket Use Cases and Performance</li>
 <li>Performance Checklist</li>
 </ul>
 </li>
-<li>WebRTC<ul>
+<li>WebRTC
+<ul>
 <li>Standards and Development of WebRTC</li>
 <li>Audio and Video Engines</li>
 <li>Real- Time Network Transports</li>
